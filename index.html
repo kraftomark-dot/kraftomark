@@ -1,34 +1,46 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Your Cool Website</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Kraftomark — Modern Landing</title>
+  <meta name="description" content="A clean, modern landing page. Interactive video can be added later." />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
   <style>
-    body {margin:0;font-family:sans-serif;background:#000;color:#fff;text-align:center;}
-    header {position:relative;height:100vh;overflow:hidden;}
-    video {position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;z-index:-1;filter:brightness(.6);}
-    h1 {margin-top:40vh;font-size:3em;animation:fadeIn 2s ease-in;}
-    @keyframes fadeIn {from{opacity:0;}to{opacity:1;}}
-    .button {display:inline-block;margin-top:20px;padding:12px 24px;border:2px solid #fff;
-             color:#fff;text-decoration:none;border-radius:8px;transition:.3s;}
-    .button:hover {background:#fff;color:#000;}
-  </style>
-</head>
-<body>
-  <header>
-    <video autoplay loop muted playsinline>
-      <source src="https://cdn.coverr.co/videos/coverr-sunset-at-the-beach-8479/1080p.mp4" type="video/mp4">
-    </video>
-    <h1>Welcome to My Interactive Site</h1>
-    <a href="#video-section" class="button">Watch Interactive Video</a>
-  </header>
+    :root{
+      --bg:#0b0c10;
+      --card:#101218;
+      --text:#e7ebf0;
+      --muted:#a8b0bd;
+      --accent:#7dd3fc;   /* light cyan */
+      --accent-2:#a78bfa; /* soft purple */
+      --radius:16px;
+      --shadow:0 8px 32px rgba(0,0,0,.35);
+    }
 
-  <section id="video-section" style="padding:60px 20px;background:#111;">
-    <h2>Interactive Video</h2>
-    <p>Try clicking on the interactive elements in the video below.</p>
-    <iframe src="https://h5p.org/h5p/embed/1406936"
-            width="960" height="540" frameborder="0" allowfullscreen></iframe>
-  </section>
-</body>
-</html>
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
+      color:var(--text);
+      background: radial-gradient(1200px 1200px at 10% -10%, rgba(125,211,252,.25), transparent 60%),
+                  radial-gradient(900px 900px at 110% 10%, rgba(167,139,250,.22), transparent 60%),
+                  var(--bg);
+      overflow-x:hidden;
+    }
+
+    .wrap{max-width:1120px;margin:0 auto;padding:24px}
+    header.nav{
+      display:flex;align-items:center;justify-content:space-between;
+      gap:12px;margin-top:6px
+    }
+    .brand{display:flex;align-items:center;gap:10px;font-weight:800;letter-spacing:.2px}
+    .brand-dot{width:12px;height:12px;border-radius:999px;
+      background:linear-gradient(90deg,var(--accent),var(--accent-2))}
+    .nav-actions a{
+      color:var(--text);text-decoration:none;border:1px solid rgba(255,255,255,.15);
+      padding:10px 14px;border-radius:10px;transition:.25s
+    }
+    .nav-actions a:hover{background:rgba(255,255,255,.06);
