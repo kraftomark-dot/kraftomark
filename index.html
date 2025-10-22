@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Your Cool Website</title>
+  <style>
+    body {margin:0;font-family:sans-serif;background:#000;color:#fff;text-align:center;}
+    header {position:relative;height:100vh;overflow:hidden;}
+    video {position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;z-index:-1;filter:brightness(.6);}
+    h1 {margin-top:40vh;font-size:3em;animation:fadeIn 2s ease-in;}
+    @keyframes fadeIn {from{opacity:0;}to{opacity:1;}}
+    .button {display:inline-block;margin-top:20px;padding:12px 24px;border:2px solid #fff;
+             color:#fff;text-decoration:none;border-radius:8px;transition:.3s;}
+    .button:hover {background:#fff;color:#000;}
+  </style>
+</head>
+<body>
+  <header>
+    <video autoplay loop muted playsinline>
+      <source src="https://cdn.coverr.co/videos/coverr-sunset-at-the-beach-8479/1080p.mp4" type="video/mp4">
+    </video>
+    <h1>Welcome to My Interactive Site</h1>
+    <a href="#video-section" class="button">Watch Interactive Video</a>
+  </header>
+
+  <section id="video-section" style="padding:60px 20px;background:#111;">
+    <h2>Interactive Video</h2>
+    <p>Try clicking on the interactive elements in the video below.</p>
+    <iframe src="https://h5p.org/h5p/embed/1406936"
+            width="960" height="540" frameborder="0" allowfullscreen></iframe>
+  </section>
+</body>
+</html>
